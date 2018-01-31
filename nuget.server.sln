@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{36E8C7F0-95BB-400D-8E5A-FEB82881FDCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "src\WebApp\WebApp.csproj", "{39D16B27-F99B-47CA-859B-8008320E856B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7AD620D9-4AB4-4F9F-B455-029EB01E681A}"
+	ProjectSection(SolutionItems) = preProject
+		cake.config = cake.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39D16B27-F99B-47CA-859B-8008320E856B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39D16B27-F99B-47CA-859B-8008320E856B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39D16B27-F99B-47CA-859B-8008320E856B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39D16B27-F99B-47CA-859B-8008320E856B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{39D16B27-F99B-47CA-859B-8008320E856B} = {36E8C7F0-95BB-400D-8E5A-FEB82881FDCC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {82FA392E-065C-48EB-906F-C39A55EFB458}
+	EndGlobalSection
+EndGlobal

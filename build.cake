@@ -55,7 +55,7 @@ Task("deploy")
         PhysicalDirectory = website.path,
         ApplicationPool = new ApplicationPoolSettings()
         {
-            Name = website.appPoolName，
+            Name = website.appPoolName,
             IdentityType = IdentityType.LocalSystem,
             MaxProcesses = 1,
             ManagedRuntimeVersion = "v4.0"
@@ -63,8 +63,6 @@ Task("deploy")
     });
     
     AddHostsRecord("127.0.0.1", website.host);
-
-    StartSite(website.host);
 });
 
 /// open browser task
