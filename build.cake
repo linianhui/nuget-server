@@ -17,7 +17,7 @@ var website = new {
 Task("clean")
     .Does(() =>
 {
-	CleanDirectories("./src/**/bin");
+    CleanDirectories("./src/**/bin");
 });
 
 
@@ -35,7 +35,7 @@ Task("build")
     .Does(() =>
 {
     MSBuild(solution, new MSBuildSettings {
-		Verbosity = Verbosity.Minimal
+	Verbosity = Verbosity.Minimal
     });
 });
 
@@ -43,6 +43,8 @@ Task("build")
 Task("deploy")
     .Does(() =>
 {
+    AddHostsRecord("127.0.0.1", website.host);
+	
     DeleteSite(website.host);
 
     CreateWebsite(new WebsiteSettings()
@@ -61,8 +63,6 @@ Task("deploy")
             ManagedRuntimeVersion = "v4.0"
         }
     });
-    
-    AddHostsRecord("127.0.0.1", website.host);
 });
 
 /// open browser task
