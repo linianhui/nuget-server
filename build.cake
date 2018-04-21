@@ -1,6 +1,6 @@
-#addin "Cake.IIS"
-#addin "Cake.Hosts"
-#addin "Cake.Powershell"
+#addin nuget:?package=cake.iis&version=0.3.0
+#addin nuget:?package=cake.hosts&version=1.1.0
+#addin nuget:?package=cake.powershell&version=0.4.5
 
 /// params
 var target = Argument("target", "default");
@@ -8,9 +8,9 @@ var target = Argument("target", "default");
 var solution = "./nuget.server.sln";
 
 var website = new {
-    host = "nuget.server.local",
+    host = "nuget.server.test",
     path = "./src/webapp",
-    appPoolName = "nuget.server.local"
+    appPoolName = "nuget.server.test"
 };
 
 /// clean task
