@@ -2,34 +2,36 @@
 #addin nuget:?package=cake.hosts&version=1.1.0
 #addin nuget:?package=cake.powershell&version=0.4.5
 
-/// params
 var target = Argument("target", "default");
 
-var solution = "./nuget.server.sln";
+var rootPath  = "./";
+var srcPath   = rootPath + "1-src/";
+var solution  = rootPath + "nuget.server.sln";
 
 var website = new {
-    host = "nuget.server.test",
-    path = "./src/webapp",
-    appPoolName = "nuget.server.test"
+    host = "nuget-server.test",
+    path = srcPath + "web.nuget.server",
+    appPoolName = "nuget-server.test"
 };
 
-/// clean task
 Task("clean")
+    .Description("清理缓存")
     .Does(() =>
 {
     CleanDirectories("./src/**/bin");
 });
 
 
-/// restor nuget packages task
 Task("restore")
+    .Description("还原依赖")
     .Does(() =>
 {
     NuGetRestore(solution);
 });
 
-/// build task
+
 Task("build")
+    .Description("构建项目")
     .IsDependentOn("clean")
     .IsDependentOn("restore")
     .Does(() =>
@@ -39,8 +41,9 @@ Task("build")
     });
 });
 
-/// deploy task
+
 Task("deploy")
+    .Description("部署项目")
     .Does(() =>
 {
     AddHostsRecord("127.0.0.1", website.host);
@@ -65,8 +68,9 @@ Task("deploy")
     });
 });
 
-/// open browser task
+
 Task("open-browser")
+    .Description("打开浏览器")
     .Does(() =>
 {
     StartPowershellScript("Start-Process", args =>
@@ -78,7 +82,6 @@ Task("open-browser")
 });
 
 
-/// default task
 Task("default")
 .IsDependentOn("build")
 .IsDependentOn("deploy")

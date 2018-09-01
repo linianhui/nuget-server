@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{36E8C7F0-95BB-400D-8E5A-FEB82881FDCC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web.nuget.server", "1-src\web.nuget.server\web.nuget.server.csproj", "{686D330F-C806-4F96-9131-D08B948D86C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "src\WebApp\WebApp.csproj", "{39D16B27-F99B-47CA-859B-8008320E856B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-src", "1-src", "{36C3EC5E-A700-439F-AF59-8D95621F2704}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7AD620D9-4AB4-4F9F-B455-029EB01E681A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{66E2FF1F-53EA-4D58-90B5-885874D41DF7}"
 	ProjectSection(SolutionItems) = preProject
 		cake.config = cake.config
 	EndProjectSection
@@ -18,16 +18,16 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{39D16B27-F99B-47CA-859B-8008320E856B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{39D16B27-F99B-47CA-859B-8008320E856B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{39D16B27-F99B-47CA-859B-8008320E856B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{39D16B27-F99B-47CA-859B-8008320E856B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{686D330F-C806-4F96-9131-D08B948D86C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{686D330F-C806-4F96-9131-D08B948D86C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{686D330F-C806-4F96-9131-D08B948D86C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{686D330F-C806-4F96-9131-D08B948D86C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{39D16B27-F99B-47CA-859B-8008320E856B} = {36E8C7F0-95BB-400D-8E5A-FEB82881FDCC}
+		{686D330F-C806-4F96-9131-D08B948D86C2} = {36C3EC5E-A700-439F-AF59-8D95621F2704}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {82FA392E-065C-48EB-906F-C39A55EFB458}
