@@ -1,6 +1,6 @@
 # Nuget Server
 
-## `Web.config`中的重点配置项（默认）
+## [1-src/web.nuget.server/Web.config](1-src/web.nuget.server/Web.config)中的重点配置项（默认）
 ```xml
 <!--默认密码-->
 <add key="apiKey" value="123456" />
